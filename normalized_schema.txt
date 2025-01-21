@@ -1,0 +1,100 @@
+--- 1NF ---
+Table: EMPLOYEE
+- Attributes: Pname, Ename, Dname
+- Primary Key: Pname, Ename, Dname
+- Candidate Keys: None
+- Multivalued Attributes: ['']
+- Functional Dependencies: None
+- Multivalued Dependencies: None
+- Foreign Keys: None
+
+--- 2NF ---
+Table: EMPLOYEE
+- Attributes: Pname, Ename, Dname
+- Primary Key: Pname, Ename, Dname
+- Candidate Keys: None
+- Multivalued Attributes: ['']
+- Functional Dependencies: None
+- Multivalued Dependencies: None
+- Foreign Keys: None
+
+--- 3NF ---
+Table: EMPLOYEE
+- Attributes: Pname, Ename, Dname
+- Primary Key: Pname, Ename, Dname
+- Candidate Keys: None
+- Multivalued Attributes: ['']
+- Functional Dependencies: None
+- Multivalued Dependencies: None
+- Foreign Keys: None
+
+--- BCNF ---
+Table: EMPLOYEE
+- Attributes: Pname, Ename, Dname
+- Primary Key: Pname, Ename, Dname
+- Candidate Keys: None
+- Multivalued Attributes: ['']
+- Functional Dependencies: None
+- Multivalued Dependencies: None
+- Foreign Keys: None
+
+--- 4NF ---
+Table: EMPLOYEE_Decomposed_frozenset({'Ename'})_{'Pname'}
+- Attributes: Pname, Ename
+- Primary Key: Pname, Ename
+- Candidate Keys: None
+- Multivalued Attributes: None
+- Functional Dependencies: None
+- Multivalued Dependencies: None
+- Foreign Keys: None
+
+--- 4NF ---
+Table: EMPLOYEE_Decomposed_frozenset({'Ename'})_{'Dname'}
+- Attributes: Ename, Dname
+- Primary Key: Ename, Dname
+- Candidate Keys: None
+- Multivalued Attributes: None
+- Functional Dependencies: None
+- Multivalued Dependencies: None
+- Foreign Keys: None
+
+--- 4NF ---
+Table: EMPLOYEE_Decomposed_frozenset({'Ename'})_{'Dname'}
+- Attributes: Ename, Dname
+- Primary Key: Ename, Dname
+- Candidate Keys: None
+- Multivalued Attributes: None
+- Functional Dependencies: None
+- Multivalued Dependencies: None
+- Foreign Keys: None
+
+--- 4NF ---
+Table: EMPLOYEE_Decomposed_frozenset({'Ename'})_{'Pname'}
+- Attributes: Pname, Ename
+- Primary Key: Pname, Ename
+- Candidate Keys: None
+- Multivalued Attributes: None
+- Functional Dependencies: None
+- Multivalued Dependencies: None
+- Foreign Keys: None
+
+--- 4NF ---
+Table: EMPLOYEE_Decomposed_frozenset({'Ename'})_{'Pname'}
+- Attributes: Pname, Ename
+- Primary Key: Pname, Ename
+- Candidate Keys: None
+- Multivalued Attributes: None
+- Functional Dependencies: None
+- Multivalued Dependencies: None
+- Foreign Keys: frozenset({'Ename'}) -> ("EMPLOYEE_Decomposed_frozenset({'Ename'})_{'Dname'}", {'Ename', 'Dname'})
+
+--- 4NF ---
+Table: EMPLOYEE_Decomposed_frozenset({'Ename'})_{'Dname'}
+- Attributes: Ename, Dname
+- Primary Key: Ename, Dname
+- Candidate Keys: None
+- Multivalued Attributes: None
+- Functional Dependencies: None
+- Multivalued Dependencies: None
+- Foreign Keys: None
+

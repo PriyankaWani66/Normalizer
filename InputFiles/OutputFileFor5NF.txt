@@ -1,0 +1,46 @@
+Normalization process for 5NF
+Original attributes: {'CustomerID', 'OrderID', 'DrinkID', 'Milk'}
+
+Appended decomposition: (('OrderID', 'CustomerID'), ('OrderID', 'DrinkID', 'Milk'))
+Appended decomposition: (('OrderID', 'DrinkID'), ('CustomerID', 'DrinkID', 'Milk'))
+Appended decomposition: (('CustomerID', 'DrinkID'), ('OrderID', 'DrinkID', 'Milk'))
+Appended decomposition: (('DrinkID', 'Milk'), ('OrderID', 'CustomerID', 'DrinkID'))
+Appended decomposition: (('OrderID', 'CustomerID', 'DrinkID'), ('OrderID', 'DrinkID', 'Milk'))
+Appended decomposition: (('OrderID', 'CustomerID', 'DrinkID'), ('CustomerID', 'DrinkID', 'Milk'))
+Appended decomposition: (('OrderID', 'DrinkID', 'Milk'), ('CustomerID', 'DrinkID', 'Milk'))
+Appended decomposition: (('OrderID', 'DrinkID'), ('CustomerID', 'DrinkID'), ('DrinkID', 'Milk'))
+Appended decomposition: (('OrderID', 'DrinkID'), ('CustomerID', 'DrinkID'), ('OrderID', 'DrinkID', 'Milk'))
+Appended decomposition: (('OrderID', 'DrinkID'), ('CustomerID', 'DrinkID'), ('CustomerID', 'DrinkID', 'Milk'))
+Appended decomposition: (('OrderID', 'DrinkID'), ('DrinkID', 'Milk'), ('OrderID', 'CustomerID', 'DrinkID'))
+Appended decomposition: (('OrderID', 'DrinkID'), ('OrderID', 'CustomerID', 'DrinkID'), ('OrderID', 'DrinkID', 'Milk'))
+Appended decomposition: (('OrderID', 'DrinkID'), ('OrderID', 'CustomerID', 'DrinkID'), ('CustomerID', 'DrinkID', 'Milk'))
+Appended decomposition: (('CustomerID', 'DrinkID'), ('DrinkID', 'Milk'), ('OrderID', 'CustomerID', 'DrinkID'))
+Appended decomposition: (('CustomerID', 'DrinkID'), ('OrderID', 'CustomerID', 'DrinkID'), ('OrderID', 'DrinkID', 'Milk'))
+Appended decomposition: (('CustomerID', 'DrinkID'), ('OrderID', 'CustomerID', 'DrinkID'), ('CustomerID', 'DrinkID', 'Milk'))
+Appended decomposition: (('DrinkID', 'Milk'), ('OrderID', 'DrinkID', 'Milk'), ('CustomerID', 'DrinkID', 'Milk'))
+
+Schema details for the final lossless decomposition:
+
+Table: CoffeeShopDrinksOrderData_Decomposed_DrinkID_Milk
+- Attributes: DrinkID, Milk
+- Primary Key: DrinkID, Milk
+- Candidate Keys: {'DrinkID', 'Milk'}
+- Multivalued Attributes: None
+- Functional Dependencies: None
+- Foreign Keys: None
+
+Table: CoffeeShopDrinksOrderData_Decomposed_OrderID_DrinkID_Milk
+- Attributes: OrderID, DrinkID, Milk
+- Primary Key: OrderID, DrinkID, Milk
+- Candidate Keys: {'OrderID', 'DrinkID', 'Milk'}
+- Multivalued Attributes: None
+- Functional Dependencies: None
+- Foreign Keys: None
+
+Table: CoffeeShopDrinksOrderData_Decomposed_CustomerID_DrinkID_Milk
+- Attributes: CustomerID, DrinkID, Milk
+- Primary Key: CustomerID, DrinkID, Milk
+- Candidate Keys: {'CustomerID', 'DrinkID', 'Milk'}
+- Multivalued Attributes: None
+- Functional Dependencies: None
+- Foreign Keys: None

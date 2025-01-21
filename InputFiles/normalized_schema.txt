@@ -1,0 +1,80 @@
+--- 1NF ---
+Table: CoffeeShopDrinksOrderData
+- Attributes: CustomerID, OrderID, DrinkID, Milk
+- Primary Key: CustomerID, OrderID, DrinkID, Milk
+- Candidate Keys: CustomerID & OrderID & DrinkID & Milk
+- Multivalued Attributes: ['']
+- Functional Dependencies: None
+- Multivalued Dependencies: None
+- Foreign Keys: None
+
+--- 2NF ---
+Table: CoffeeShopDrinksOrderData
+- Attributes: CustomerID, OrderID, DrinkID, Milk
+- Primary Key: CustomerID, OrderID, DrinkID, Milk
+- Candidate Keys: CustomerID & OrderID & DrinkID & Milk
+- Multivalued Attributes: ['']
+- Functional Dependencies: None
+- Multivalued Dependencies: None
+- Foreign Keys: None
+
+--- 3NF ---
+Table: CoffeeShopDrinksOrderData
+- Attributes: CustomerID, OrderID, DrinkID, Milk
+- Primary Key: CustomerID, OrderID, DrinkID, Milk
+- Candidate Keys: CustomerID & OrderID & DrinkID & Milk
+- Multivalued Attributes: ['']
+- Functional Dependencies: None
+- Multivalued Dependencies: None
+- Foreign Keys: None
+
+--- BCNF ---
+Table: CoffeeShopDrinksOrderData
+- Attributes: CustomerID, OrderID, DrinkID, Milk
+- Primary Key: CustomerID, OrderID, DrinkID, Milk
+- Candidate Keys: CustomerID & OrderID & DrinkID & Milk
+- Multivalued Attributes: ['']
+- Functional Dependencies: None
+- Multivalued Dependencies: None
+- Foreign Keys: None
+
+--- 4NF ---
+Table: CoffeeShopDrinksOrderData
+- Attributes: CustomerID, OrderID, DrinkID, Milk
+- Primary Key: CustomerID, OrderID, DrinkID, Milk
+- Candidate Keys: CustomerID & OrderID & DrinkID & Milk
+- Multivalued Attributes: ['']
+- Functional Dependencies: None
+- Multivalued Dependencies: None
+- Foreign Keys: None
+
+--- 5NF ---
+Table: CoffeeShopDrinksOrderData_Decomposed_DrinkID_Milk
+- Attributes: DrinkID, Milk
+- Primary Key: DrinkID, Milk
+- Candidate Keys: DrinkID & Milk
+- Multivalued Attributes: None
+- Functional Dependencies: None
+- Multivalued Dependencies: None
+- Foreign Keys: None
+
+--- 5NF ---
+Table: CoffeeShopDrinksOrderData_Decomposed_OrderID_DrinkID_Milk
+- Attributes: OrderID, DrinkID, Milk
+- Primary Key: OrderID, DrinkID, Milk
+- Candidate Keys: OrderID & DrinkID & Milk
+- Multivalued Attributes: None
+- Functional Dependencies: None
+- Multivalued Dependencies: None
+- Foreign Keys: frozenset({'DrinkID'}) -> ('CoffeeShopDrinksOrderData_Decomposed_DrinkID_Milk', {'DrinkID', 'Milk'}), frozenset({'Milk'}) -> ('CoffeeShopDrinksOrderData_Decomposed_DrinkID_Milk', {'DrinkID', 'Milk'})
+
+--- 5NF ---
+Table: CoffeeShopDrinksOrderData_Decomposed_CustomerID_DrinkID_Milk
+- Attributes: CustomerID, DrinkID, Milk
+- Primary Key: CustomerID, DrinkID, Milk
+- Candidate Keys: CustomerID & DrinkID & Milk
+- Multivalued Attributes: None
+- Functional Dependencies: None
+- Multivalued Dependencies: None
+- Foreign Keys: frozenset({'DrinkID'}) -> ('CoffeeShopDrinksOrderData_Decomposed_DrinkID_Milk', {'DrinkID', 'Milk'}), frozenset({'Milk'}) -> ('CoffeeShopDrinksOrderData_Decomposed_DrinkID_Milk', {'DrinkID', 'Milk'})
+
